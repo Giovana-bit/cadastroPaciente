@@ -25,6 +25,7 @@ function goToConsulta(event) {
   document.getElementById("cadastro-form").classList.add("hidden");
   document.getElementById("cadastro-form").classList.remove("active");
   hideMenu(); 
+  document.querySelector(".container").style.height = "100%";
 }
 
 function openCadastroForm() {
@@ -36,8 +37,7 @@ function openCadastroForm() {
 }
 
 function salvarPaciente() {
-  // Aqui você deve implementar a lógica para salvar os dados do paciente
-  // No exemplo abaixo, estou simplesmente exibindo um alerta com os dados
+  // Coleta os dados do formulário
   let codigo = document.getElementById("codigo").value;
   let nome = document.getElementById("nome").value;
   let dataNascimento = document.getElementById("data-nascimento").value;
@@ -47,10 +47,23 @@ function salvarPaciente() {
   let tipoSanguineo = document.getElementById("tipo-sanguineo").value;
   let estadoCivil = document.getElementById("estado-civil").value;
   let raca = document.getElementById("raca").value;
-  alert("Paciente salvo com sucesso! \n Código: " + codigo + "\n Nome: " + nome + 
-      "\n Data de Nascimento: " + dataNascimento + "\n Sexo: " + sexo + "\n Naturalidade: " + naturalidade +
-      "\n Profissão: " + profissao + "\n Tipo Sanguíneo: " + tipoSanguineo + "\n Estado Civil: " + estadoCivil +
-      "\n Raça: " + raca);
+
+  // Cria a mensagem de alerta com os dados
+  let mensagem = "Paciente salvo com sucesso! \n";
+  mensagem += "Código: " + codigo + "\n";
+  mensagem += "Nome: " + nome + "\n";
+  mensagem += "Data de Nascimento: " + dataNascimento + "\n";
+  mensagem += "Sexo: " + sexo + "\n";
+  mensagem += "Naturalidade: " + naturalidade + "\n";
+  mensagem += "Profissão: " + profissao + "\n";
+  mensagem += "Tipo Sanguíneo: " + tipoSanguineo + "\n";
+  mensagem += "Estado Civil: " + estadoCivil + "\n";
+  mensagem += "Raça: " + raca;
+
+  // Exibe o alerta
+  alert(mensagem);
+
+  // Oculta o formulário
   document.getElementById("cadastro-form").classList.add("hidden");
   document.getElementById("cadastro-form").classList.remove("active");
 }

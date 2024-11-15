@@ -79,7 +79,7 @@ body {
     color: #fff;
 }
 .title-second {
-    color: #58af9b;
+    color: #ffffff;
 }
 .description {
     font-size: 14px;
@@ -90,7 +90,7 @@ body {
     color: #fff;
 }
 .description-second {
-    color: #7f8c8d;
+    color: #ffffff;
 }
 .btn {
     border-radius: 15px;
@@ -193,8 +193,6 @@ input:-webkit-autofill
     text-transform: capitalize;
 }
 
-/* ... seu CSS atual ... */
-
 .cadastro-form {
     background-color: #fff;
     border-radius: 15px;
@@ -262,7 +260,116 @@ input:-webkit-autofill
     left: 0;
 }
 
+/* ... (seu CSS anterior) ... */
 
+.third-content {
+    display: flex;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s;
+    padding: 0; /* Removendo padding externo */
+}
+
+.third-content.active {
+    opacity: 1;
+}
+
+.third-content .first-column { /* Sidebar */
+    width: 30%;
+    background-color: #BE7CCE;
+    padding: 20px;
+    border-radius: 15px 0 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.third-content .second-column { /* Seção principal com a tabela */
+    width: 70%;
+    padding: 20px;
+    display: flex; /* Usando flexbox para a seção principal */
+    flex-direction: column; /* Empilha elementos verticalmente */
+    height: 100%;
+    margin-left: 20px; /* Espaço entre sidebar e conteúdo */
+}
+
+.third-content .second-column > * { /* Aplica estilo a todos os elementos diretos da second-column */
+  margin-bottom: 20px; /* Adiciona margem entre a barra de pesquisa, tabela e dados adicionais */
+}
+
+.third-content .second-column .search-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.third-content .second-column .search-bar input {
+    flex-grow: 1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.third-content .second-column .search-bar i {
+    margin-right: 10px;
+}
+
+
+.third-content .second-column #tabela-pacientes {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #ccc;
+}
+
+.third-content #tabela-pacientes th,
+.third-content #tabela-pacientes td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+.third-content #tabela-pacientes th {
+    background-color: #BE7CCE;
+    color: white;
+}
+
+.third-content #tabela-pacientes .btn-acessar {
+    background-color: #BE7CCE;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.third-content .dados-adicionais {
+    background-color: #ddd;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.dados-adicionais h3 {
+    margin-bottom: 10px;
+}
+
+.dados-container {
+    text-align: left;
+}
+
+.dados-container strong {
+    display: inline-block;
+    width: 150px;
+}
+
+/* ... (restante do seu CSS) ... */
 
 .sign-in-js .first-content .first-column {
     z-index: -1;
