@@ -205,8 +205,8 @@ input:-webkit-autofill
     position: absolute; /* Use position: absolute para sobrepor a tela de login */
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Centralize o formulário */
-    display: flex; /* Use display: flex para o layout do formulário */
+    transform: translate(-50%, -50%); /* Centraliza o formulário */
+    display: flex; 
     z-index: 100; /* Garante que o formulário fique por cima da tela de login */
     opacity: 0;
     transition: opacity 0.5s; /* Animação de opacidade */
@@ -238,7 +238,7 @@ input:-webkit-autofill
     width: 100%;
     border: none;
     background-color: #ecf0f1;
-    margin-bottom: 10px; /* Adicione espaçamento entre os campos */
+    margin-bottom: 10px; /* Adiciona espaçamento entre os campos */
 }
 .cadastro-form .label-input {
     background-color: #ecf0f1;
