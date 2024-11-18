@@ -50,46 +50,11 @@
                 </form>
             </div>
         </div>
-        <div class="content third-content hidden">
-            <div class="first-column">
-                <div class="sidebar">
-                    <h2 class="title title-second">Pacientes Cadastrados</h2>
-                    <p class="description description-second">Veja os pacientes registrados</p>
-                </div>
-            </div>
-            <div class="second-column">
-                <div class="search-bar">
-                    <i class="fas fa-search icon-modify"></i>
-                    <input type="text" id="pesquisa" placeholder="Pesquisar Paciente">
-                </div>
-                <table id="tabela-pacientes">
-                    <thead>
-                        <tr>
-                            <th>Código</th>
-                            <th>Nome</th>
-                            <th>Data de Nascimento</th>
-                            <th>Situação</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Dados dos pacientes serão adicionados aqui -->
-                    </tbody>
-                </table>
-                <div class="dados-adicionais">
-                    <div class="dados-container">
-                        <h3>Dados Adicionais</h3>
-                        <p><strong>Código:</strong> 12345</p>
-                        <p><strong>Nome:</strong> Fulano de Tal</p>
-                        <p><strong>Data de Nascimento:</strong> 10/10/2000</p>
-                        <p><strong>Situação:</strong> Ativo</p>
-                    </div>
-                </div>
-            </div>
         </div>
         <div id="menu-container" class="hidden">
             <ul>
                 <li><a href="#" onclick="openCadastroForm()">Adicionar Paciente</a></li>
-                <li><a href="#" onclick="goToConsulta(event)">Localizar Paciente</a></li>
+                <li><a href="index2.html" onclick="goToConsulta(event)">Localizar Paciente</a></li>
             </ul>
         </div>
         <div class="content cadastro-form hidden" id="cadastro-form">
